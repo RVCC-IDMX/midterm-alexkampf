@@ -1,2 +1,22 @@
 /* Journey to the Center of the Earth Practicum */
 /* Alexander Kampf */
+body{
+    background-image: linear-gradient(#765729 50%, #000000);
+}
+header, nav, main, aside,footer{
+    border:.25rem solid #886644;
+    padding: 5px ;
+    margin: 5px;
+    box-shadow:5px 10px 20px inset;
+}
+
+
+header{
+border-top-left-radius: 25px;
+border-top-right-radius: 25px;
+}
+
+footer{
+border-bottom-left-radius: 25px;
+border-bottom-right-radius: 25px;
+}
