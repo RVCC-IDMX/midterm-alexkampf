@@ -1,22 +1,147 @@
 /* Journey to the Center of the Earth Practicum */
 /* Alexander Kampf */
 body{
-    background-image: linear-gradient(#765729 50%, #000000);
+    background-image: linear-gradient(#765729 65%, #000000);
 }
+/* general element style*/
 header, nav, main, aside,footer{
+    background-color: rgba(255, 255, 255, 0.75);
     border:.25rem solid #886644;
     padding: 5px ;
-    margin: 5px;
+    margin: 7px;
     box-shadow:5px 10px 20px inset;
 }
 
-
 header{
-border-top-left-radius: 25px;
-border-top-right-radius: 25px;
+    background-image: url("../img/cave.jpg");/* need to figure out how to make images responsive*/
+    background-size: cover;
+    box-shadow:10px 20px 40px 10px black inset;
+    font-family: Georgia;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    text-shadow: 3px 3px 7px black;
+    text-align: center;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
 }
 
 footer{
-border-bottom-left-radius: 25px;
-border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
+
+h2{
+    border-bottom: 2px dashed black ;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    font-weight: bold;
+}
+
+ nav ul{
+     display: flex;
+     flex-wrap: wrap;
+     list-style: none;
+}
+
+nav li{
+    display: flex;
+    flex-wrap: wrap;
+    border-left: 3px double #000000;
+    margin-left: 1rem;
+    padding-left: 1rem;
+}
+
+nav li:first-child{
+    border: none;
+}
+
+a:link{
+    color: #000000;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+    color: #a52a2a;
+}
+
+#cover{
+    float:left;
+    padding: .15rem 1rem 1.25rem;
+    max-width: 100%;
+    width: 200px;
+    height: auto;
+}
+
+#cryptogram img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    width: 200px;
+    height: auto;
+}
+
+#cryptogram figcaption{
+    text-align:center;
+    font-style: italic;
+}
+
+main p{
+    margin: 1rem;
+}
+main p:first-of-type::first-line{ /* Quentin https://stackoverflow.com/questions/50256200/how-to-style-the-first-paragraph-of-a-section-in-html5*/
+    font-size:large;
+}
+
+.submission{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border: 1px solid black;
+    background-color: white;
+    padding: .5rem;
+    margin: .70rem 1.5rem ;
+}
+
+.opinion{/* cannot figure out how to properly format the text*/
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 5rem ;
+}
+
+.signature{
+    font-style: italic;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 200px;
+    height: auto;
+    margin-left: 2rem;
+    align-items: end;
+    align-content: end;
+}
+
+footer p{
+    text-align: center;
+}
+
+span:lang(fr){
+    font-style: italic;
+}
+
+span:lang(it){
+    font-style: italic;
+}
+
+span:lang(is){
+    font-style: italic;
+}
+
+span:lang(id){
+    font-style: italic;
+}
+
+.character{
+    font-weight: bold;
+}
+
