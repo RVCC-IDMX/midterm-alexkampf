@@ -42,6 +42,7 @@ h2{
      display: flex;
      flex-wrap: wrap;
      list-style: none;
+     align-items: center;
 }
 
 nav li{
@@ -50,6 +51,7 @@ nav li{
     border-left: 3px double #000000;
     margin-left: 1rem;
     padding-left: 1rem;
+    align-items: center;
 }
 
 nav li:first-child{
@@ -147,9 +149,15 @@ span:lang(id){
 
 /*tablet size*/
 @media screen and (min-width: 768px){
+    
     header{
-
+        font-size: larger;
     }
+    
+    nav ul{
+        justify-content: center;
+    }
+
     /*resize cryptogram*/
     #cryptogram img{
         width: 500px;
@@ -175,10 +183,45 @@ span:lang(id){
         height: 100px;
         padding: 0;
         margin:0;
+        grid-area: content;
     }
     .signature{
-        display:block;
+        grid-area: content;
     }
 
 }
+/* anything larger*/
+@media screen and (min-width: 1024px){
 
+    header{
+        font-size: x-large;
+    }
+    
+    header, footer{
+        width: 129.25%; /* couldnt figure out how to make header and footer span the whole page, for some reason the grid messes it up without this*/
+    }
+    
+    body{
+        display: grid;
+        grid-template-columns: 1.5fr .5fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    nav{
+        grid-column: 1/ 3;
+    }
+    nav ul{
+        justify-content: center;
+    }
+
+    aside{
+        display: block;
+    }
+
+    .submission{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: .5rem;
+        margin: .70rem 1.5rem ;
+    }
+}
