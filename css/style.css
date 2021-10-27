@@ -13,7 +13,7 @@ header, nav, main, aside,footer{
 }
 
 header{
-    background-image: url("../img/cave.jpg");/* need to figure out how to make images responsive*/
+    background-image: url("../img/cave.jpg");
     background-size: cover;
     box-shadow:10px 20px 40px 10px black inset;
     font-family: Georgia;
@@ -104,7 +104,7 @@ main p:first-of-type::first-line{ /* Quentin https://stackoverflow.com/questions
     margin: .70rem 1.5rem ;
 }
 
-.opinion{/* cannot figure out how to properly format the text*/
+.opinion{/*cannot figure out how to properly format the text*/
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin-left: 5rem ;
@@ -143,5 +143,42 @@ span:lang(id){
 
 .character{
     font-weight: bold;
+}
+
+/*tablet size*/
+@media screen and (min-width: 768px){
+    header{
+
+    }
+    /*resize cryptogram*/
+    #cryptogram img{
+        width: 500px;
+        height: auto;
+    }
+    aside{/* make it a row*/
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: .4fr 1fr;
+    }
+    aside h2{/*@josuh learncssgrid.com*/
+        grid-column: 1/ 4;
+    }
+    .submission{
+        width: 150px;
+        height:75px;
+        padding:;
+        margin:1rem;
+    }
+    .opinion{/* I have no idea how to make it fit the submission :(*/
+        display:block;
+        width: auto;
+        height: 100px;
+        padding: 0;
+        margin:0;
+    }
+    .signature{
+        display:block;
+    }
+
 }
 
